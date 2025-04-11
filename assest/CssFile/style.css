@@ -61,7 +61,7 @@
 
 
     }
-    h1,h2,h3,h4,h5, #logo, .nav-logo{
+    h1,h2,h3,h4,h5, #logo, .nav-logo, .marquee-content span ul{
         font-family: "Marcellus", serif;
     }
     h1{
@@ -163,7 +163,7 @@
         position: relative;
         font-family: "Roboto", sans-serif;
         
-        background: var(--bg-white-color);
+        background: var(--bg-creme-color);
         color: var(--text-grey); 
     
         transition:  all 0.5s ease-in-out;
@@ -207,8 +207,10 @@
 }
    section,
    footer{
-    margin: 2% 6%;
+    margin: 2% 4%;
     max-width: 100%;
+    position: relative;
+    padding: 25px ;
 }
 
 @keyframes zoom{
@@ -263,7 +265,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background:#00000015;
+    background:#0000000c;
  }
  #hero .head{
    
@@ -273,7 +275,7 @@
     justify-content: space-between;
     align-items: center;
     z-index: 1;
-    transition: var(--transition-1);
+    transition: var(--transition-2);
  }
  #logo{
     max-width: 100%;
@@ -308,8 +310,8 @@
  #navBar{
     max-width: 100%;
     width: 450px;
-    background:#00000081;
-    backdrop-filter: blur(25px);
+    background:#0000009f;
+    backdrop-filter: blur(50px);
     z-index: 2;
     position: fixed;
     top: 5%;
@@ -427,3 +429,310 @@
  }
 
  
+ /* ----------------------------------------
+ ============= main start here  ==============
+ -------------------------------------------*/ 
+
+ /* ===============counter section===========  */
+ #counter{
+    max-width: 100%;
+    margin:  0 auto;
+    width: 100%;
+    height: inherit;
+    border-bottom: 1px solid #929090;
+    
+    
+ }
+ #counter .counter-container{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    padding: 4% 0;
+    
+    
+ }
+ .counter-container .counter-card{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+ }
+ .counter-card h3{
+    color: var(--text-grey);
+    text-transform: capitalize;
+ }
+ .counter-card p{
+    font-size: var(--font-18);
+    text-transform: capitalize;
+    color: var(--text-grey);
+ }
+
+
+ /* ===============product section===========  */
+ #product,
+ #trading{
+    max-width: 100%;
+    margin: 0 auto;
+    height: inherit;
+
+ }
+ #product .product-content,
+ #trading .product-content{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+ }
+ .product-content h2{
+    text-transform: capitalize;
+    font-weight: 400;
+
+ }
+ .viewAll{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: var(--font-h5);
+    font-weight: 500;
+    color: var(--text-grey);
+    font-family: "Marcellus", serif;
+    transition: var(--transition-1);
+ }
+ .viewAll i{
+    transition: var(--transition-1);
+ }
+ .viewAll:hover i{
+    margin-left: 10px;
+ }
+ .product-container{
+    max-width: 100%;
+    margin: 5% auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+ }
+ .product-container .product-card{
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid #00000013;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    padding: 1px;
+ }
+ .product-card .product-card-content{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
+   
+ }
+ .product-card:hover .product-img img{
+    transform: scale(1.04);
+    
+ }
+ .product-card-content .product-img{
+    width: 100%;
+    height: 300px;
+    position: relative;
+   
+ }
+ .product-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    transition: var(--transition-2);
+   
+    
+ }
+ .product-img a,
+ .trading-card a{
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    right: 10px;
+    width: 45%;
+    padding: 10px;
+    border: none;
+    transition: var(--transition-2);
+ }
+ .product-img a:hover,
+ .trading-card a:hover{
+    opacity: 0.8;
+    background: #ffffffc4;
+    backdrop-filter: blur(50px);
+ }
+ .product-card .product-card-info{
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+ }
+ .product-card-info h4{
+    font-weight: 400;
+    font-size: var(--font-h5);
+    text-transform: capitalize;
+    color: var(--text-grey);
+ }
+ .product-card-info p{
+    font-size: var(--font-16);
+    color: var(--text-grey);
+    font-weight: 400;
+    text-transform: capitalize;
+ }
+ .product-card-info span{
+    font-size: var(--font-h5);
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: "Marcellus", serif;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+ }
+
+ /* ===============product section===========  */
+ .trading-cotainer {
+    max-width: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+ }
+ .trading-cotainer .trading-card{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+ }
+ .trading-cotainer .trading-card:hover .trading-info span{
+    font-size: var(--font-h3);
+ }
+ .trading-cotainer .trading-card:hover  img{
+
+    transform: scale(1.2);
+ }
+ .trading-card img{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    transition: 1s ease-in-out;
+ }
+ 
+ .trading-card .trading-info{
+    position: absolute;
+    bottom:  0;
+    padding:  50px;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    max-width: 100%;
+ }
+ .trading-info p{
+    z-index: 1;
+    color: var(--text-white);
+ }
+ .trading-info p:nth-child(1){
+    font-size: var(--font-16);
+    font-weight: 500;
+    margin-bottom: 20px;
+ }
+ .trading-info p:nth-child(3){
+    color: var(--text-white2);
+    font-size: var(--font-18);
+    font-weight: 600;
+    margin-bottom: 10px;
+ }
+ .trading-info p:nth-child(4){
+    font-size: var(--font-16);
+    color: var(--text-white);
+    line-height: 25px;
+    margin-bottom: 20px;
+ }
+ .trading-info h4{
+    color: var(--text-white);
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+ }
+ .trading-info span{
+    font-size: var(--font-h4);
+    font-family: "Marcellus", serif;
+    color: var(--bg-card-color);
+    transition: var(--transition-1);
+    
+
+ }
+ .trading-card a{
+    width: 30%;
+    top: 30px;
+    right: 30px;
+ }
+
+
+ .marquee-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background: var(--bg-creme-color);
+    padding: 50px 0;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-top: 25px;
+  }
+
+  .marquee-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 200s linear infinite;
+  }
+
+  .marquee-content span {
+    margin-right: 50px;
+    display: inline-block;
+    gap: 10px;
+    
+
+  }
+  .marquee-content span ul{
+    display: flex;
+    gap: 30px;
+    font-size: var(--font-h3);
+  }
+  .marquee-content span ul i{
+    font-size: var(--font-h2);
+    color: #000;
+  }
+
+  @keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
