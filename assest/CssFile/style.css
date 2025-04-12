@@ -1005,7 +1005,7 @@
 }
 .instagram-container .instagram-card{
    width: 100%;
-   height: 280px;
+   height: 300px;
    position: relative;
    cursor: pointer;
    transition: var(--transition-1);
@@ -1187,3 +1187,86 @@
   .copywrites p{
    text-transform: capitalize;
   }
+
+  /* ----------------------------------------
+ ============= product html start here  ==============
+ -------------------------------------------*/
+
+ #productHtml{
+   max-width: 100%;
+   margin: 10% auto;
+   width: 100%;
+ }
+ #productHtml h3{
+   color: var(--text-grey);
+   text-transform: capitalize;
+   padding: 0 35px;
+ }
+ #product-container{
+   max-width: 100%;
+   margin: 5% 2%;
+   position: relative;
+ }
+ #product-container .slideOne-btn{
+   max-width: 100%;
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   gap: 25px;
+ }
+ .slideOne-btn .btn_one{
+   max-width: 100%;
+   padding: 8px 35px;
+   border-radius: 5px;
+   border: 1px solid #33333369;
+   background: transparent;
+   color: var(--text-grey);
+   font-size: var(--font-18);
+   text-transform: capitalize;
+   transition: var(--transition-2);
+ }
+ .slideOne-btn .btn_one:hover,
+ .slideOne-btn .btn_one.active-one{
+   color: var(--text-white2);
+   background: var(--bg-secondary-color);
+   transition: var(--transition-2);
+ }
+
+ #slideOne-container{
+   max-width: 100%;
+   height: auto;
+   margin: 5% auto;
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   gap: 25px;
+   animation: fade 1s ease-in-out;
+   transition-delay: 0.5s;
+   transition: 0.5s ;
+  
+ }
+ .slideOne-container .slideOne-content{
+   max-width: 100%;
+   width: 100%;
+   margin: 5px auto;
+   padding: 30px 0px;
+   display: none;
+   animation: fade 1s ease-in-out;
+
+}
+.slideOne-content.active-one{
+   display: block;
+  
+}
+.slideOne-content .product-card{
+   cursor: pointer;
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+   border: 1px solid #33333321;
+   border-radius: 10px;
+   padding: 5px;
+}
