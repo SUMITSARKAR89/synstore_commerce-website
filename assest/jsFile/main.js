@@ -40,3 +40,26 @@ function scrollbarNavigation(){
          navBar2.style.opacity = "0";
     }
 };
+
+// ================wheel slider system control===============
+
+const reviewSlider = document.querySelector('.review-slider');
+const sliderPrev = document.querySelector('#w-leftBtn');
+const sliderNext = document.querySelector('#w-rightBtn');
+
+reviewSlider.addEventListener('wheel', (i) => {
+    i.preventDefault();
+    reviewSlider.scrollLeft += i.deltaY;
+    reviewSlider.style.scrollBehaviour = "auto";
+});
+
+sliderNext.addEventListener('click', () => {
+    reviewSlider.style.scrollBehaviour = "smooth";
+    reviewSlider.scrollLeft += 1200;
+
+});
+sliderPrev.addEventListener('click', () => {
+    reviewSlider.style.scrollBehaviour = "smooth";
+    reviewSlider.scrollLeft += -1200;
+
+});
