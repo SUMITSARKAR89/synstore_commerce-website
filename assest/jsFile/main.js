@@ -63,3 +63,12 @@ sliderPrev.addEventListener('click', () => {
     reviewSlider.scrollLeft += -1200;
 
 });
+
+// ================faq control===============
+const faqContent = document.querySelectorAll(".faq-content");
+
+faqContent.forEach( faqs => {
+    faqs.addEventListener("click", () => {
+        faqs.classList.toggle("active");
+    })
+})

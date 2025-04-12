@@ -477,7 +477,9 @@
  #product,
  #trading,
  #hot-product,
- #review{
+ #review,
+ #faq, 
+ #post{
     max-width: 100%;
     margin: 0 auto;
     height: inherit;
@@ -485,7 +487,8 @@
  }
  #product .product-content,
  #trading .product-content,
- #hot-product .product-content{
+ #hot-product .product-content,
+ #post .product-content{
     max-width: 100%;
     display: flex;
     justify-content: space-between;
@@ -896,4 +899,87 @@
    max-width: 100%;
    color: var(--text-white2);
    
+}
+
+/* ===============faq section===========  */
+#faq{
+   background:var(--bg-card-color);
+   padding-bottom: 8%;
+}
+
+.faq-container{
+   max-width: 100%;
+   width: 90%;
+   margin:  0 auto;
+   margin-top: 5%;
+   height: auto;
+}
+.faq-container .faq-content{
+   max-width: 100%;
+   margin:  0;
+   padding: 15px 0 ;
+   height: auto;
+   border-bottom: 2px solid #24232323;
+}
+.faq-content .question{
+   max-width: 100%;
+   width: 100%;
+   display: flex;
+ 
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 15px;
+   cursor: pointer;
+   transition: 0.2s ;
+   background-color: transparent;
+   border-radius: 5px;
+   color: var(--text-grey);
+   transition: var(--transition-1);
+}
+.faq-content .question:hover{
+   width: 99.9%;
+}
+.faq-content .question i{
+   font-size: var(--font-h3);
+}
+
+.question h3{
+   color: var(--text-grey);
+   text-transform: capitalize;
+}
+.faq-content .answare{
+   padding: 10px 15px 2px;
+   max-width: 100%;
+   width: 98%;
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 0.5s ease-in-out;
+   animation: fadeed 1s ease-in-out;
+}
+.faq-content .answare p{
+   line-height: 25px;
+   opacity: 0.8;
+   color: var(--text-grey);
+   opacity: 0.8;
+}
+
+.faq-content.active .answare{
+   max-height: 400px;
+}
+.faq-content.active .ri-add-line{
+   transform: rotate(135deg);
+   color: #000000;
+}
+.ri-add-line {
+   transition: transform 0.5s ease;
+}
+
+@keyframes fadeed {
+   from{
+       opacity: 0;
+       transform: translateY(-10px);
+   }to{
+       opacity: 1;
+       transform: translateY(0);
+   }
 }
