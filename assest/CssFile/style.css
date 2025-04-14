@@ -65,7 +65,8 @@
     #logo, 
     .nav-logo, 
     .marquee-content span ul, 
-    .footer-card-left a{
+    .footer-card-left a,
+    .tranding-title span{
         font-family: "Marcellus", serif;
     }
     h1{
@@ -482,7 +483,8 @@
  #hot-product,
  #review,
  #faq, 
- #post{
+ #post,
+ #newArrival{
     max-width: 100%;
     margin: 0 auto;
     height: inherit;
@@ -491,7 +493,8 @@
  #product .product-content,
  #trading .product-content,
  #hot-product .product-content,
- #post .product-content{
+ #post .product-content,
+ #newArrival .product-content{
     max-width: 100%;
     display: flex;
     justify-content: space-between;
@@ -530,7 +533,8 @@
     justify-content: center;
     align-items: center;
  }
- .product-container .product-card{
+ .product-container .product-card,
+ .slideOne-content .product-card{
     position: relative;
     max-width: 100%;
     width: 100%;
@@ -557,6 +561,9 @@
     transform: scale(1.04);
     
  }
+ .product-card:hover .product-img a{
+   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.493));
+ }
  .product-card-content .product-img{
     width: 100%;
     height: 300px;
@@ -570,11 +577,12 @@
     overflow-clip-margin: content-box;
     overflow: clip;
     transition: var(--transition-2);
+    
    
     
  }
  .product-img a,
- .trading-card a{
+ .trading-card .btn{
     position: absolute;
     width: 100%;
     top: 10px;
@@ -583,13 +591,21 @@
     padding: 10px;
     border: 1px solid #33333356;
     transition: var(--transition-2);
+   
+      
  }
  .product-img a:hover,
- .trading-card a:hover{
+ .trading-card:hover .btn{
     opacity: 0.8;
     background: #ffffffc4;
     backdrop-filter: blur(50px);
+ 
  }
+ .trading-card:hover .btn{
+   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.493));
+
+ }
+ 
  .product-card .product-card-info{
     width: 100%;
     max-width: 100%;
@@ -635,6 +651,7 @@
  .trading-cotainer .trading-card{
     position: relative;
     width: 100%;
+    max-width: 100%;
     height: 600px;
     border-radius: 10px;
     overflow: hidden;
@@ -699,7 +716,7 @@
     
 
  }
- .trading-card a{
+ .trading-card .btn{
     width: 30%;
     top: 30px;
     right: 30px;
@@ -910,14 +927,16 @@
    padding-bottom: 8%;
 }
 
-.faq-container{
+.faq-container,
+.trending-faq{
    max-width: 100%;
    width: 90%;
    margin:  0 auto;
    margin-top: 5%;
    height: auto;
 }
-.faq-container .faq-content{
+.faq-container .faq-content,
+.trending-faq .trend-faq{
    max-width: 100%;
    margin:  0;
    padding: 15px 0 ;
@@ -925,8 +944,11 @@
    border-bottom: 2px solid #24232323;
    z-index: 2;
 }
-
-.faq-content .question{
+.trending-faq .trend-faq{
+   padding:0;
+}
+.faq-content .question,
+.trend-faq .question-t{
    max-width: 100%;
    width: 100%;
    display: flex;
@@ -941,18 +963,28 @@
    color: var(--text-grey);
    transition: var(--transition-1);
 }
-.faq-content .question:hover{
+
+.faq-content .question:hover,
+.trend-faq .question-t:hover{
    width: 99.9%;
 }
-.faq-content .question i{
+.faq-content .question i,
+.trend-faq .question-t i{
    font-size: var(--font-h3);
 }
 
-.question h3{
+.question h3,
+.question-t h3{
    color: var(--text-grey);
    text-transform: capitalize;
 }
-.faq-content .answare{
+.question-t h3{
+   font-weight: 400;
+   opacity: 1;
+   margin-top: 10px;
+}
+.faq-content .answare,
+.trend-faq .answare{
    padding: 10px 15px 2px;
    max-width: 100%;
    width: 98%;
@@ -961,7 +993,8 @@
    transition: max-height 0.5s ease-in-out;
    animation: fadeed 0.2s ease-in-out;
 }
-.faq-content .answare p{
+.faq-content .answare p,
+.trend-faq .answare p{
    line-height: 25px;
    opacity: 0.8;
    color: var(--text-grey);
@@ -1232,10 +1265,14 @@
    transition: var(--transition-2);
  }
 
- #slideOne-container{
+ 
+
+ .slideOne-container{
    max-width: 100%;
    height: auto;
    margin: 5% auto;
+   padding: 2%;
+
    width: 100%;
    display: grid;
    grid-template-columns: repeat(4, 1fr);
@@ -1246,27 +1283,271 @@
    animation: fade 1s ease-in-out;
    transition-delay: 0.5s;
    transition: 0.5s ;
+   
   
- }
- .slideOne-container .slideOne-content{
+  
+}
+.slideOne-container .slideOne-content{
    max-width: 100%;
+   min-height:100%;
+  
+   object-fit: cover;
    width: 100%;
    margin: 5px auto;
+   
    padding: 30px 0px;
+   
    display: none;
-   animation: fade 1s ease-in-out;
-
+   animation: fadeed 1s ease-in-out;
+  
+   
 }
 .slideOne-content.active-one{
    display: block;
   
 }
-.slideOne-content .product-card{
-   cursor: pointer;
+
+.slideOne-content .card{
+   
+   max-width: 100%;
+   width: 100%;
+   height:100%;
+   padding: 10px 0px 15px;
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   
+  
    display: flex;
    flex-direction: column;
-   gap: 25px;
-   border: 1px solid #33333321;
-   border-radius: 10px;
-   padding: 5px;
+   justify-content: center;
+   align-items: center;
+   gap: 15px;
+   border-radius: 5px 5px 0 0 ;
+  
+   
+
+   
+}
+.slideOne-content .img-container{
+   position: relative;
+   cursor: pointer;
+   overflow: hidden;
+   max-width: 100%;
+   width: 100%;
+   height: 100%;
+   border-radius: 15px;
+   transform: scale(1);
+   padding: 15px 0;
+   transition: 0.3s;
+   
+  
+}
+.card .card-body{
+   max-width: 100%;
+   height: auto;
+   width: 100%;
+   text-align: left;
+   padding: 0 30px;
+   
+}
+
+.card-body h5{
+   font-size: 1.5rem;
+   font-weight: 800;
+   text-transform: capitalize;
+   color: #000000ef;
+}
+.card-body h2{
+   font-size: 2rem;
+   font-weight: 900;
+   letter-spacing: -3px;
+   color: #000;
+   opacity: 0.7;
+   text-align: left;
+}
+.store-img{
+   transition: all 1s ease-in-out;
+   object-fit: cover;
+   cursor: pointer;
+   height: 100%;
+   width: 100%;
+   max-width: 100%;
+   
+   border-radius: 5px;
+   transition: 0.3s; 
+   filter: drop-shadow(0 50px 20px #0009);  
+}
+.img-container:hover .store-img{
+   transform: scale(1.05);
+}
+
+
+
+/* ----------------------------------------
+ ============= price-cart-HTML start here  ==============
+ -------------------------------------------*/
+ #trending{
+   max-width: 100%;
+   position: relative;
+   margin: 10% auto;
+
+ }
+ #trending .trending-container{
+   max-width: 100%;
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   gap: 30px;
+   align-items: flex-start;
+
+ }
+ .trending-container .tranding-image-card{
+   max-width: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 10px;
+ }
+ .tranding-image-card .trending-img-card{
+   max-width: 100%;
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   gap: 10px;
+ }
+ .trending-img-card img{
+   max-width: 100%;
+   width: 100%;
+   height: 220px;
+   border-radius: 20px;
+ }
+ .tranding-image-card .trending-imag-card-2{
+   max-width: 100%;
+ 
+   width: 100%;
+  height: 680px;
+
+
+ }
+ .trending-imag-card-2 img{
+   height: 100%;
+   width: 100%;
+   border-radius: 20px;
+   
+ }
+ .trending-container .tranding-contents{
+   width: 70%;
+   max-width: 100%;
+   padding: 5px 25px 5px 2px;
+ }
+ .tranding-contents .tranding-content-star{
+   max-width: 100%;
+   display: flex;
+   gap: 10px;
+   margin-bottom: 10px;
+ }
+ .tranding-content-star i,
+ .tranding-content-star span{
+   font-size: var(--font-h5);
+   font-weight: 600;
+   color: var(--text-grey);
+ }
+ .tranding-contents .tranding-title{
+   max-width: 100%;
+   margin-bottom: 20px;
+   margin-top: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+   justify-content: flex-start;
+   align-items: flex-start;
+ }
+ .tranding-title h3{
+   font-weight: 300;
+   color: var(--text-grey);
+   text-transform: capitalize;
+ }
+ .tranding-contents h5{
+   margin-bottom: 20px;
+   color: var(--text-grey);
+   opacity: 0.7;
+   text-transform: capitalize;
+ }
+ .tranding-contents .tranding-txt{
+   font-size: var(--font-18);
+   margin-bottom: 20px;
+   line-height: 25px;
+ }
+ .tranding-title span{
+   font-size: var(--font-h3);
+   color: var(--text-grey);
+   margin-bottom: 20px;
+
+ }
+ .tranding-title  .buy-btn{
+   font-size: var(--font-h5);
+   background: #000;
+   color: var(--text-white);
+   width: 100%;
+   max-width: 100%;
+   padding: 10px 30px;
+   border-radius: 35px;
+   cursor: pointer;
+   opacity: 1;
+   transition: var(--transition-1);
+
+ }
+ .tranding-title  .buy-btn:hover{
+   background:#333 ;
+ }
+
+
+ .trend-faq.active .answare{
+   max-height: 400px;
+}
+.trend-faq.active .ri-add-line{
+   transform: rotate(135deg);
+   color: #000000;
+}
+
+.newArrival-image{
+   margin: 5% auto;
+   max-width: 100%;
+   width: 100%;
+   height: 400px;
+   cursor: pointer;
+   position: relative;
+   overflow: hidden;
+   transition: var(--transition-1);
+   border-radius: 20px;
+}
+.newArrival-image img{
+   height: 100%;
+   width: 100%;
+   border-radius: 20px;
+   transform: scale(1);
+   transition: var(--transition-1);
+
+}
+.newArrival-image img:hover{
+   transform: scale(1.05);
+}
+.newArrival-image span{
+   position: absolute;
+   width: 25%;
+   top: 30px;
+   right: 30px;
+   padding: 15px 25px;
+   font-size: var(--font-18);
+   color: var(--text-grey);
+   background: var(--text-white);
+   cursor: pointer;
+   transition: var(--transition-1);
+   opacity: 1;
+   border: 1px solid #33333386;
+   border-radius: 25px;
+   font-weight: 600;
+}
+.newArrival-image span:hover{
+   opacity: 0.8;
 }

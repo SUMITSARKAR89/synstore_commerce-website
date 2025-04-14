@@ -72,3 +72,47 @@ faqContent.forEach( faqs => {
         faqs.classList.toggle("active");
     })
 })
+
+
+// =================================== product ==================
+const buttonsOne = document.querySelectorAll(".btn_one");
+
+buttonsOne.forEach((btn) => {
+    btn.addEventListener('click', () => {
+
+        buttonsOne.forEach((btn) => {
+            btn.classList.remove("active-one");
+        });
+        btn.classList.add("active-one");
+    });
+});
+
+const contentOne = document.querySelectorAll(".slideOne-content");
+
+
+function filterSelectionOne(category) {
+    // Show all if category is 'all', otherwise filter by category
+    contentOne.forEach((a) => {
+      if (category === "all" || a.classList.contains(category)) {
+        a.classList.add('active-one');
+        
+      } else {
+        a.classList.remove('active-one');
+        
+      }
+    });
+  }  
+  filterSelectionOne("all");
+
+
+
+//   ======================================================
+
+// ================faq control===============
+const trendFaq = document.querySelectorAll(".trend-faq");
+
+trendFaq.forEach( faqs => {
+    faqs.addEventListener("click", () => {
+        faqs.classList.toggle("active");
+    })
+})

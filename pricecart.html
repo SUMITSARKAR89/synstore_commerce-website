@@ -58,7 +58,7 @@
     </div>
     <div id="hero" style="background-image: none; height: 0vh;">
 
-        <div class="head" style="background: #E8E1D3;">
+        <div class="head" style="background: #E8E1D3; border-bottom: 1px solid rgba(5, 0, 0, 0.24);">
             <a href="index.html" id="logo" style="color: #000000ad;">SyntStore</a>
             <div class="head-nav">
                 <a href="#product" style="color: #000000ad;">products</a>
@@ -91,350 +91,107 @@
  ============= main start here  ==============
  -------------------------------------------*/  -->
  <main>
-
-  
-    
-
-     <!-- ----------------product html section-------------  -->
-    <section id="productHtml">
-        <h3>all products</h3>
-
-        <div id="product-container">
-            <div class="slideOne-btn">
-                <button class="btn_one active-one" onclick="filterSelectionOne('all')">  All</button>
-                <button class="btn_one" onclick="filterSelectionOne('new')"> new arrival</button>
-                <button class="btn_one" onclick="filterSelectionOne('top')"> top trending</button> 
-                <button class="btn_one " onclick="filterSelectionOne('hot')"> hot</button>
+    <section id="trending">
+        <div class="trending-container">
+            <div class="tranding-image-card">
+                <div class="trending-img-card">
+                    <img src="https://framerusercontent.com/images/wDNHQuqjAALVszU0fFTccpdjQ.jpg?scale-down-to=512" alt="">
+                    <img src="https://framerusercontent.com/images/kLYXbs4i6y6zRTVa98X6RJyAzw.jpg?scale-down-to=1024" alt="">
+                    <img src="https://framerusercontent.com/images/GWqxjg89aDRh4uTXipnfghlkp1o.jpg?scale-down-to=1024" alt="">
+                </div>
+                <div class="trending-imag-card-2">
+                    <img src="https://framerusercontent.com/images/OTQ2EuVgEUHzVICwZYoQMylHOo0.jpg?scale-down-to=4096" alt="">
+                </div>
             </div>
+            <div class="tranding-contents">
+                <div class="tranding-content-star">
+                    <i class="fa-solid fa-star"></i>
+                    <span>4.9</span>
+                    <span>(94,77)</span>
+                </div>
+                <div class="tranding-title">
+                    <h3>Silky Smooth Body Lotion</h3>
+                    <h5>Hydrate and nourish</h5>
+                    <p class="tranding-txt">A targeted cream that tightens and firms the skin on your neck for a more youthful appearance.</p>
 
-            <div class="slideOne-container" id="storeItem" >
-
-                <div class="slideOne-content new active-one">
-                    <div class="product-card">
-                        <div class="product-card-content">
-                            <div class="product-img">
-                                <img src="https://framerusercontent.com/images/dXh7lqvjzzEeCuUaVQLl6n3e98.jpg?scale-down-to=4096" alt="">
-                                <a href="#" class="btn">new arrival</a>
-                            </div>
+                    <span>$49</span>
+                    <button type="button" class="buy-btn">buy now</button>
+                </div>
+                <div class="trending-faq">
+                    <div class="trend-faq">
+                        <div class="question-t">
+                            <h5>Key Benefits:</h5>
+                            <i class="ri-add-line"></i>
                         </div>
-                        <div class="product-card-info">
-                            <h4>Rejuvenating</h4>
-                            <p>body scrub</p>
-                            <span>$49</span>
+                        <div class="answare">
+                            <p>Improves skin elasticity. Reduces the appearance of fine lines and sagging</p>
                         </div>
                     </div>
-                    
-                </div>
-                <div class="slideOne-content hot">
-                    <div class="product-card">
-                        <div class="product-card-content">
-                            <div class="product-img">
-                                <img src="https://framerusercontent.com/images/GaJ4qTWR9vmpoeoFpT2Og7i744I.jpg?scale-down-to=1024" alt="">
-                                <a href="#" class="btn">hot</a>
-                            </div>
+                    <div class="trend-faq">
+                        <div class="question-t">
+                            <h5>How to use:</h5>
+                            <i class="ri-add-line"></i>
                         </div>
-                        <div class="product-card-info">
-                            <h4>Ultra-Moisturizing </h4>
-                            <p>Hand Cream</p>
-                            <span>$49</span>
+                        <div class="answare">
+                            <p>Smooths and refines skin texture. Promotes a healthy, glowing complexion.</p>
                         </div>
                     </div>
-                   
-                </div>
-                <div class="slideOne-content hot">
-                    <div class="product-card">
-                        <div class="product-card-content">
-                            <div class="product-img">
-                                <img src="https://framerusercontent.com/images/O5cxKYUY9AnoVZ4O6CaloaT2E.jpg?scale-down-to=1024" alt="">
-                                <a href="#" class="btn">hot</a>
-                            </div>
+                    <div class="trend-faq">
+                        <div class="question-t">
+                            <h5>Ingredients:</h5>
+                            <i class="ri-add-line"></i>
                         </div>
-                        <div class="product-card-info">
-                            <h4>Restorative</h4>
-                            <p>Foot Balm</p>
-                            <span>$49</span>
-                        </div>
-                    </div>
-                   
-                    
-                </div>
-                <div class="slideOne-content hot">
-                    <div class="product-card">
-                        <div class="product-card-content">
-                            <div class="product-img">
-                                <img src="https://framerusercontent.com/images/QiFNYNoX0gXRLVjfxiuPDvcoHo.jpg?scale-down-to=1024" alt="">
-                                <a href="#" class="btn">hot</a>
-                            </div>
-                        </div>
-                        <div class="product-card-info">
-                            <h4>Soothing Aloe</h4>
-                            <p>After-Sun Gel</p>
-                            <span>$49</span>
-                        </div>
-                    </div>
-                
-                </div>
-                <div class="slideOne-content hot">
-                    <div class="product-card">
-                        <div class="product-card-content">
-                            <div class="product-img">
-                                <img src="https://framerusercontent.com/images/opVkgRAJcIpOSf27j4l9BTLrkIc.jpg?scale-down-to=1024" alt="">
-                                <a href="#" class="btn">hot</a>
-                            </div>
-                        </div>
-                        <div class="product-card-info">
-                            <h4>Revitalizing </h4>
-                            <p>Night Cream</p>
-                            <span>$49</span>
-                        </div>
-                    </div>
-                  
-                </div>
-
-                <div class="slideOne-content hot ">
-                    <div class="product-card">
-                        <div class="product-card-content">
-                            <div class="product-img">
-                                <img src="https://framerusercontent.com/images/sWAJvBRPLTGVJEhw6tukyRdwOE.jpg?scale-down-to=1024" alt="">
-                                <a href="#" class="btn">hot</a>
-                            </div>
-                        </div>
-                        <div class="product-card-info">
-                            <h4>Clay MaskClay Mask </h4>
-                            <p>Lip Balm</p>
-                            <span>$49</span>
-                        </div>
-                    </div>
-                   
-                    
-                </div>
-                <div class="slideOne-content hot">
-                    <div class="product-card">
-                        <div class="product-card-content">
-                            <div class="product-img">
-                                <img src="https://framerusercontent.com/images/Wu9XGFhSeJYXGMZT3PAA2VdPeI.jpg?scale-down-to=1024" alt="">
-                                <a href="#" class="btn">hot</a>
-                            </div>
-                        </div>
-                        <div class="product-card-info">
-                            <h4>Purifying </h4>
-                            <p>Clay Mask</p>
-                            <span>$49</span>
-                        </div>
-                    </div>
-                   
-                </div>
-                <div class="slideOne-content new">
-                    <div class="product-card">
-                        <div class="product-card-content">
-                            <div class="product-img">
-                                <img src="https://framerusercontent.com/images/dXh7lqvjzzEeCuUaVQLl6n3e98.jpg?scale-down-to=1024" alt="">
-                                <a href="#" class="btn">new arrival</a>
-                            </div>
-                        </div>
-                        <div class="product-card-info">
-                            <h4>Rejuvenating </h4>
-                            <p>Body Scrub</p>
-                            <span>$49</span>
-                        </div>
-                    </div>
-                 
-                    
-                </div>
-                <div class="slideOne-content new">
-                    <div class="product-card">
-                        <div class="product-card-content">
-                            <div class="product-img">
-                                <img src="https://framerusercontent.com/images/PAbtqOKI5LGQAF8x5DoaqFkqo.jpg?scale-down-to=1024" alt="">
-                                <a href="#" class="btn">new arrival</a>
-                            </div>
-                        </div>
-                        <div class="product-card-info">
-                            <h4>Anti-Aging</h4>
-                            <p>Eye Cream</p>
-                            <span>$49</span>
-                        </div>
-                    </div>
-                  
-                    
-                </div>
-                <div class="slideOne-content top">
-                    <div class="product-card">
-                        <div class="product-card-content">
-                            <div class="product-img">
-                                <img src="https://framerusercontent.com/images/OTQ2EuVgEUHzVICwZYoQMylHOo0.jpg?scale-down-to=1024" alt="">
-                                <a href="#" class="btn">trending</a>
-                            </div>
-                        </div>
-                        <div class="product-card-info">
-                            <h4>Silky Smooth Body Lotion</h4>
-                            <p>Hydrate and nourish</p>
-                            <span>$49</span>
-                        </div>
-                    </div>
-                   
-                    
-                </div>
-                <div class="slideOne-content top">
-                    <div class="product-card">
-                        <div class="product-card-content">
-                            <div class="product-img">
-                                <img src="https://framerusercontent.com/images/KJ25HCKwifFKo9V8TJSHXv2gY.jpg?scale-down-to=1024" alt="">
-                                <a href="#" class="btn">trending</a>
-                            </div>
-                        </div>
-                        <div class="product-card-info">
-                            <h4>Firm & Lift Neck Cream</h4>
-                            <p>Tighten and firm the skin on your neck for a youthful look.</p>
-                            <span>$49</span>
+                        <div class="answare">
+                            <p>Hyaluronic acid, shea butter, and botanical extracts for deep moisture and nourishment.</p>
                         </div>
                     </div>
                 </div>
-                <div class="slideOne-content new">
-                    <div class="product-card">
-                        <div class="product-card-content">
-                            <div class="product-img">
-                                <img src="https://framerusercontent.com/images/OxAO4GfI3ECFmYkG0gYlT3jihyA.jpg?scale-down-to=1024" alt="">
-                                <a href="#" class="btn">new arrival</a>
-                            </div>
-                        </div>
-                        <div class="product-card-info">
-                            <h4>Bright Eyes</h4>
-                            <p>Illuminating Serum</p>
-                            <span>$49</span>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="slideOne-content hot">
-                    <div class="product-card">
-                        <div class="product-card-content">
-                            <div class="product-img">
-                                <img src="https://framerusercontent.com/images/WcuXS8gm0TlqEvnf5iWNhSWOUE.jpg?scale-down-to=512" alt="">
-                                <a href="#" class="btn">hot</a>
-                            </div>
-                        </div>
-                        <div class="product-card-info">
-                            <h4>Velvet Touch </h4>
-                            <p>Exfoliating Scrub</p>
-                            <span>$49</span>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="slideOne-content new">
-                    <div class="product-card">
-                        <div class="product-card-content">
-                            <div class="product-img">
-                                <img src="https://framerusercontent.com/images/LfnEaCVxb9kaUzviEUQ9eW8gvA.jpg?scale-down-to=1024" alt="">
-                                <a href="#" class="btn">new arrival</a>
-                            </div>
-                        </div>
-                        <div class="product-card-info">
-                            <h4>Luminous Glows</h4>
-                            <p>Hydrating Cream</p>
-                            <span>$49</span>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="slideOne-content hot">
-                    <div class="product-card">
-                        <div class="product-card-content">
-                            <div class="product-img">
-                                <img src="https://framerusercontent.com/images/qBwYIWjoyoctOYX0fTFuSYzHho.jpg?scale-down-to=1024" alt="">
-                                <a href="#" class="btn">hot</a>
-                            </div>
-                        </div>
-                        <div class="product-card-info">
-                            <h4>Radiant Renewal  </h4>
-                            <p>Facial Cleanser</p>
-                            <span>$49</span>
-                        </div>
-                    </div>
-                </div>
-
-                
+               
             </div>
-
         </div>
-       
+
     </section>
 
-    <!-- ----------------marquee -------------  -->
-    <div class="marquee-container" style="margin-top: 7%;">
-        <div class="marquee-content">
-        <span>
-            <ul>
 
-                <p>Get 20% on your first purchase!</p>
-                <i class="ri-gemini-fill"></i>
-             </ul>
-        </span>
-        <span>
-            <ul>
-                <p>Get 20% on your first purchase!</p>
-                <i class="ri-gemini-fill"></i>
-             </ul>
-        </span>
-        <span>
-            <ul>
-                <p>Get 20% on your first purchase!</p>
-                <i class="ri-gemini-fill"></i>
-             </ul>
-        </span>
-        <span>
-            <ul>
-                <p>Get 20% on your first purchase!</p>
-                <i class="ri-gemini-fill"></i>
-             </ul>
-        </span>
-        <span>
-            <ul>
-                <p>Get 20% on your first purchase!</p>
-                <i class="ri-gemini-fill"></i>
-             </ul>
-        </span>
-        <span>
-            <ul>
-                <p>Get 20% on your first purchase!</p>
-                <i class="ri-gemini-fill"></i>
-             </ul>
-        </span>
-        <span>
-            <ul>
-                <p>Get 20% on your first purchase!</p>
-                <i class="ri-gemini-fill"></i>
-             </ul>
-        </span>
-        <span>
-            <ul>
-                <p>Get 20% on your first purchase!</p>
-                <i class="ri-gemini-fill"></i>
-             </ul>
-        </span>
-        <span>
-            <ul>
-                <p>Get 20% on your first purchase!</p>
-                <i class="ri-gemini-fill"></i>
-             </ul>
-        </span>
-        <span>
-            <ul>
-                <p>Get 20% on your first purchase!</p>
-                <i class="ri-gemini-fill"></i>
-             </ul>
-        </span>
-        <span>
-            <ul>
-                <p>Get 20% on your first purchase!</p>
-                <i class="ri-gemini-fill"></i>
-             </ul>
-        </span>
-        
-
+     <!-- ------counter-----  -->
+    <section id="counter" style="border-top: 1px solid #333; border-bottom: 1px solid #333; margin-bottom:10px ;">
+        <div class="container">
+            <div class="counter-container">
+                <div class="counter-card">
+                    <h3>4,500+</h3>
+                    <p>happy customer</p>
+                </div>
+                <div class="counter-card">
+                    <h3>5.0</h3>
+                    <p>star rating</p>
+                </div>
+                <div class="counter-card">
+                    <h3>24/7</h3>
+                    <p>customer service</p>
+                </div>
+                <div class="counter-card">
+                    <h3>7 days</h3>
+                    <p>fast and secure delivery</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- -----------------arrival-section--------  -->
+     <section id="newArrival">
+        <div class="product-content">
+            <h2>new arrival</h2>
+            <a class="viewAll" href="product.html"> view all <i class="ri-arrow-right-line"></i></a>
+        </div>
+
+        <a href="" class="newArrival-image">
+            <img src="https://framerusercontent.com/images/KJ25HCKwifFKo9V8TJSHXv2gY.jpg?scale-down-to=4096" alt="">
+
+            <span>trending</span>
+
+        </a>
+     </section>
+  
 
     <!-- ---------------review -------------  -->
     <section id="review">
@@ -646,38 +403,7 @@
         </div>
     </section>
 
-    <!-- ---------------instagram post -------------  -->
-    <section id="post">
-        <div class="product-content" style="padding: 0 2%;">
-            <h2>Instagram Posts</h2>
-            <a class="viewAll" href="https://www.instagram.com/m"> check instagram <i class="ri-arrow-right-line"></i></a>
-        </div>
-
-        <div class="instagram-container">
-            <div  class="instagram-card">
-                <img src="https://framerusercontent.com/images/Wu9XGFhSeJYXGMZT3PAA2VdPeI.jpg?scale-down-to=512" alt="">
-                <a href="https://www.instagram.com/m">go now</a>
-                
-            </div>
-            <div  class="instagram-card">
-                <img src="https://framerusercontent.com/images/t6bt40ZDkCzuZumjmKRyhElKW8.jpg" alt="">
-                <a href="https://www.instagram.com/m">go now</a>
-                
-            </div>
-            <div  class="instagram-card">
-                <img src="https://framerusercontent.com/images/wwmvnrOEseOtuou7qs1VRdErCQ.jpg" alt="">
-                <a href="https://www.instagram.com/m">go now</a>
-                
-            </div>
-            <div  class="instagram-card">
-                <img src="https://framerusercontent.com/images/Rp6dTmjoV76Cuxclx1AA99dDnBw.jpg" alt="">
-                <a href="https://www.instagram.com/m">go now</a>
-                
-            </div>
-        </div>
-
-    </section>
-
+   
 
  </main>
  <!-- /* ----------------------------------------
