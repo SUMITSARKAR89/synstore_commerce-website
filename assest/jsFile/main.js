@@ -114,5 +114,20 @@ const trendFaq = document.querySelectorAll(".trend-faq");
 trendFaq.forEach( faqs => {
     faqs.addEventListener("click", () => {
         faqs.classList.toggle("active");
-    })
-})
+    });
+});
+
+
+// ================form control===============
+const subcribeCard = document.querySelector("#subcribe-card");
+const sub = document.querySelector("#sub");
+const subClose = document.querySelector("#sub-close");
+
+
+sub.addEventListener("click", () => {
+    subcribeCard.style.display = "flex";
+});
+subClose.addEventListener("click", () => {
+    subcribeCard.style.display = "none";
+   
+});

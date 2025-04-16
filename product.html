@@ -64,7 +64,7 @@
                 <a href="#product" style="color: #000000ad;">products</a>
                 <a href="#review" style="color: #000000ad;">reviews</a>
                 <a href="#faq" style="color: #000000ad;">FAQs</a>
-                <a href="contact" style="color: #000000ad;">subscribe</a>
+                <a href="#subscription" style="color: #000000ad;">subscribe</a>
             </div>
         </div>
 
@@ -74,7 +74,7 @@
                 <a href="product.html">products</a>
                 <a href="#review">reviews</a>
                 <a href="#faq">FAQs</a>
-                <a href="contact">subscribe</a>
+                <a id="sub">subscribe</a>
             </div>
             <div class="navBar-menu">
                 <i class="ri-menu-line navBaropen" ></i>
@@ -91,6 +91,42 @@
  ============= main start here  ==============
  -------------------------------------------*/  -->
  <main>
+
+     <div id="subcribe-card">
+      
+        <div class="subcribe-content">
+            <i class="fa-solid fa-circle-xmark" id="sub-close"></i>
+            <h3>contact form</h3>
+
+
+            <form class="contact-form">
+            
+               <div class="input-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
+               </div>
+               <div class="input-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+               </div>
+        
+               <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+               </div>
+            
+                <div class="input-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required rows="5"></textarea>
+                </div>
+            
+                 <button type="submit" class="form-submit">📨 Submit Message</button>
+                <p class="small-note">We’ll get back to you within 24–48 hours.</p> 
+            </form>
+            
+        </div>
+
+    </div>
 
   
     
@@ -688,7 +724,7 @@
         <div class="footer-card-left">
             <a href="index.html">syntstore</a>
             <p>Our journey began with a simple mission: to create high-quality, effective skincare products that harness the power of nature and science.</p>
-            <div class="sub-group">
+            <div class="sub-group" id="subscription">
                 <input type="email" name="email" id="email" placeholder="name@email.com">
                  <input type="submit" value="subscribe" class="sub-btn">
             </div>
