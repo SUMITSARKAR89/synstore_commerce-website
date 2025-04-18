@@ -232,6 +232,67 @@
     }
  }
 
+ /* ----------------------modal- control---------------  */
+ .modal{
+   position: fixed;
+   height: 100%;
+   width: 100%;
+   margin: 0 auto;
+   top: 0;
+   left: 0;
+   background-color:var(--bg-primary-color);
+   backdrop-filter: blur(80px);
+   z-index: 100;
+   display: none;
+   animation: zoom 0.3s , linear;
+   transition: var(--transition-2);
+   overflow: auto;
+
+  
+   
+ }
+ .modal.active{
+   display: block;
+
+  
+}
+.modal.active #modal-img{
+    animation: zoom 0.3s , linear;
+}
+
+.modal-t{
+   color: red;
+}
+
+ .modal-top{
+   max-width: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto;
+ }
+ .modal-top p{
+   padding: 10px;
+   width: 100%;
+   text-align: center;
+   background: var(--bg-secondary-color);
+   color: var(--text-white);
+ }
+ .modal-body{
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+   height: 100%;
+   max-width: 100%;
+   margin-top: 10%;
+   padding: 0;  
+   z-index: 100;
+  
+}
+
+
 
   /* ----------------------------------------
  ============= header start here  ==============
@@ -378,6 +439,10 @@
     padding: 15px;
     background: var(--bg-creme-color);
  }
+
+
+ 
+ /* ----------------------header---------------  */
  .head-card p{
     font-size: var(--font-16);
     color: var(--text-grey);
@@ -419,7 +484,8 @@
     font-size: var(--font-h2);
     color: var(--text-white);
     font-weight: 400;
-    z-index: 2;
+    z-index: 1;
+   
     
  }
  .head .head-nav{
@@ -459,7 +525,7 @@
     border-radius: 10px;
     /* display: flex; */
     display: none;
-    z-index: 999;
+    z-index: 9999;
     justify-content: space-between;
     align-items: center;
     transition: var(--transition-2);
@@ -536,7 +602,7 @@
 
  .hero-content{
     max-width: 100%;
-    z-index: 100;
+    z-index: 1;
     width: 800px;
     margin: 20px 45px;
     position: relative;
@@ -809,7 +875,7 @@
     bottom:  0;
     padding:  50px;
     left: 0;
-    z-index: 100;
+    z-index: 1;
     width: 100%;
     max-width: 100%;
  }
@@ -1523,6 +1589,18 @@
    margin: 10% auto;
 
  }
+ .modal-container{
+   max-width: 100%;
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   gap: 30px;
+   padding: 5%;
+   align-items: flex-start;
+   cursor: pointer;
+
+ }
+
  #trending .trending-container{
    max-width: 100%;
    display: flex;
@@ -1532,7 +1610,8 @@
    align-items: flex-start;
 
  }
- .trending-container .tranding-image-card{
+ .trending-container .tranding-image-card,
+ .modal-container .modal-image-card{
    max-width: 100%;
    width: 100%;
    display: flex;
@@ -1540,20 +1619,23 @@
    align-items: center;
    gap: 10px;
  }
- .tranding-image-card .trending-img-card{
+ .tranding-image-card .trending-img-card,
+ .modal-image-card .modal-img-card{
    max-width: 100%;
    display: flex;
    flex-direction: column;
    width: 50%;
    gap: 10px;
  }
- .trending-img-card img{
+ .trending-img-card img,
+ .modal-img-card img{
    max-width: 100%;
    width: 100%;
    height: 220px;
    border-radius: 20px;
  }
- .tranding-image-card .trending-imag-card-2{
+ .tranding-image-card .trending-imag-card-2,
+ .modal-image-card .modal-img-card-2{
    max-width: 100%;
  
    width: 100%;
@@ -1561,18 +1643,22 @@
 
 
  }
- .trending-imag-card-2 img{
+ .trending-imag-card-2 img,
+ .modal-img-card-2 img{
    height: 100%;
    width: 100%;
    border-radius: 20px;
    
  }
- .trending-container .tranding-contents{
+ .trending-container .tranding-contents,
+ .modal-container .modal-contents{
    width: 70%;
    max-width: 100%;
    padding: 5px 25px 5px 2px;
+   z-index: 9999;
  }
- .tranding-contents .tranding-content-star{
+ .tranding-contents .tranding-content-star,
+ .modal-contents .tranding-content-star{
    max-width: 100%;
    display: flex;
    gap: 10px;
@@ -1584,7 +1670,8 @@
    font-weight: 600;
    color: var(--text-grey);
  }
- .tranding-contents .tranding-title{
+ .tranding-contents .tranding-title,
+ .modal-contents .tranding-title{
    max-width: 100%;
    margin-bottom: 20px;
    margin-top: 20px;
@@ -1627,6 +1714,7 @@
    cursor: pointer;
    opacity: 1;
    transition: var(--transition-1);
+   z-index: 10;
 
  }
  .tranding-title  .buy-btn:hover{

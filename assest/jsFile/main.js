@@ -131,3 +131,30 @@ subClose.addEventListener("click", () => {
     subcribeCard.style.display = "none";
    
 });
+
+
+// ================================================modal control---------------
+
+const mainImages = document.querySelectorAll(".product-img img");
+const modalBody = document.querySelector(".modal");
+const modalImages = document.querySelector(".modal-img");
+const modalText = document.querySelector(".modal-title");
+const modalT = document.querySelectorAll(".modal-t");
+
+mainImages.forEach((image) => {
+    image.addEventListener('click', () => {
+        modalBody.classList.add('active');
+
+        modalImages.src = image.src;
+        modalText.innerHTML = image.alt;
+        // Get the related product card info text
+        const productCard = image.closest(".product-card");
+        const productInfo = productCard.querySelector(".product-card-info p");
+
+        // Set text in all modal-t elements (if more than one)
+        modalT.forEach(el => {
+            el.innerHTML = productInfo ? productInfo.innerHTML : "";
+        });
+    });
+
+});
