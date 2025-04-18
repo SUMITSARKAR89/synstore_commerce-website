@@ -251,6 +251,25 @@
   
    
  }
+ .modal-back{
+   background: var(--text-grey);
+   color: var(--text-white);
+   text-transform: capitalize;
+   gap: 10px;
+   padding: 10px 25px;
+   border-radius: 35px;
+   position: absolute;
+   top: 15%;
+   right: 5%;
+   max-width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   font-size: var(--font-h5);
+   transition: var(--transition-1);
+   animation: zoom 0.3s , linear;
+ }
  .modal.active{
    display: block;
 

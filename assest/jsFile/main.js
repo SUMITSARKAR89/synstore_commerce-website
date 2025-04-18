@@ -140,6 +140,7 @@ const modalBody = document.querySelector(".modal");
 const modalImages = document.querySelector(".modal-img");
 const modalText = document.querySelector(".modal-title");
 const modalT = document.querySelectorAll(".modal-t");
+const modalClosed = document.querySelector(".modal-back");
 
 mainImages.forEach((image) => {
     image.addEventListener('click', () => {
@@ -154,7 +155,15 @@ mainImages.forEach((image) => {
         // Set text in all modal-t elements (if more than one)
         modalT.forEach(el => {
             el.innerHTML = productInfo ? productInfo.innerHTML : "";
+            el.style.color = "#000";
+            el.style.fontSize = "18px";
+            el.style.fontWeight = "800";
         });
+
+        modalClosed.addEventListener('click', () =>{
+            modalBody.classList.remove('active')
+        })
     });
 
 });
+
