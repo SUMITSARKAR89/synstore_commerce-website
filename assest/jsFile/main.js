@@ -1,3 +1,6 @@
+
+
+
 // ================navBar menu control===============
 
 const navBarOpen = document.querySelector(".navBaropen");
@@ -9,13 +12,13 @@ navBarOpen.addEventListener("click", () => {
     navBarOpen.style.display = "none";
     navBarClose.style.display = "block";
     navBarLink.style.display = "flex";
-    navBar.style.width = "600px";
+    navBar.style.width = "500px";
 });
 navBarClose.addEventListener("click", () => {
     navBarOpen.style.display = "block";
     navBarClose.style.display = "none";
      navBarLink.style.display = "none";
-     navBar.style.width = "450px";
+     navBar.style.width = "400px";
 });
 
 // ================scrollbar system control===============
@@ -41,28 +44,27 @@ function scrollbarNavigation(){
     }
 };
 
-// ================wheel slider system control===============
 
-const reviewSlider = document.querySelector('.review-slider');
-const sliderPrev = document.querySelector('#w-leftBtn');
-const sliderNext = document.querySelector('#w-rightBtn');
+const slider = document.getElementById('slider');
+const leftBtn = document.getElementById('leftBtn');
+const rightBtn = document.getElementById('rightBtn');
 
-reviewSlider.addEventListener('wheel', (i) => {
-    i.preventDefault();
-    reviewSlider.scrollLeft += i.deltaY;
-    reviewSlider.style.scrollBehaviour = "auto";
+// Scroll buttons
+leftBtn.addEventListener('click', () => {
+  slider.scrollBy({ left: -320, behavior: 'smooth' });
 });
 
-sliderNext.addEventListener('click', () => {
-    reviewSlider.style.scrollBehaviour = "smooth";
-    reviewSlider.scrollLeft += 1200;
-
+rightBtn.addEventListener('click', () => {
+  slider.scrollBy({ left: 320, behavior: 'smooth' });
 });
-sliderPrev.addEventListener('click', () => {
-    reviewSlider.style.scrollBehaviour = "smooth";
-    reviewSlider.scrollLeft += -1200;
 
+// Scroll with mouse wheel
+slider.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  slider.scrollBy({ left: e.deltaY, behavior: 'auto' });
 });
+
+
 
 // ================faq control===============
 const faqContent = document.querySelectorAll(".faq-content");
@@ -70,8 +72,8 @@ const faqContent = document.querySelectorAll(".faq-content");
 faqContent.forEach( faqs => {
     faqs.addEventListener("click", () => {
         faqs.classList.toggle("active");
-    })
-})
+    });
+});
 
 
 // =================================== product ==================
@@ -121,10 +123,14 @@ trendFaq.forEach( faqs => {
 // ================form control===============
 const subcribeCard = document.querySelector("#subcribe-card");
 const sub = document.querySelector("#sub");
+const sub2 = document.querySelector("#sub2");
 const subClose = document.querySelector("#sub-close");
 
 
 sub.addEventListener("click", () => {
+    subcribeCard.style.display = "flex";
+});
+sub2.addEventListener("click", () => {
     subcribeCard.style.display = "flex";
 });
 subClose.addEventListener("click", () => {
