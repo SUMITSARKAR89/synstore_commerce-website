@@ -42,8 +42,8 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
 
     <!-- ---scroll reveal js ---------------------------------->
-    <!-- <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
     <title>SyntStore | Make your skin Glow</title>
    
@@ -1033,6 +1033,17 @@
 
 
     <script src="assest/jsFile/main.js"></script>
+    <script>
+                ScrollReveal({ 
+            reset: '',
+            distance: "60px",
+            duration: 2500,
+            delay:400 
+        });
+        ScrollReveal().reveal('.head-card, #logo,  ', { delay: 100, origin: 'top', interval: 200 });
+    ScrollReveal().reveal('.btn_one', { delay: 300, origin: 'bottom', interval: 200 });
+    ScrollReveal().reveal('.product-card', { delay: 100, origin: 'right', interval: 200 });
+    </script>
     
     
   

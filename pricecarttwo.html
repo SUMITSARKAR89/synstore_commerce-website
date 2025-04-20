@@ -42,8 +42,8 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
 
     <!-- ---scroll reveal js ---------------------------------->
-    <!-- <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
     <title>SyntStore | Make your skin Glow</title>
    
@@ -226,9 +226,9 @@
             <span>trending</span>
 
         </a>
-        <h5>Silky Smooth Body Lotion</h5>
-        <p>Hydrate and nourish</p>
-        <h3>$49</h3>
+        <h5 class="t2">Silky Smooth Body Lotion</h5>
+        <p class="t1">Hydrate and nourish</p>
+        <h3 class="t2">$49</h3>
      </section>
   
 
@@ -457,6 +457,28 @@
 
 
     <script src="assest/jsFile/main.js"></script>
+    <script>
+        ScrollReveal({ 
+    reset: '',
+    distance: "60px",
+    duration: 2500,
+    delay:400 
+});
+ScrollReveal().reveal('.head-card, #logo', { delay: 100, origin: 'top', interval: 200 });
+ScrollReveal().reveal('.btn_one', { delay: 300, origin: 'bottom', interval: 200 });
+ScrollReveal().reveal('.product-btn, .trending-imag-card-2', { delay: 500, origin: 'top' });
+
+ScrollReveal().reveal('.hero-h1, .counter-card', { delay: 100, origin: 'bottom', interval: 200 });
+ScrollReveal().reveal('.review-information, .footer-card-left', { delay: 100, origin: 'bottom' });
+ScrollReveal().reveal('.copywrites p, .copywrites a', { delay: 400, origin: 'bottom' });
+
+ScrollReveal().reveal('.hero-star, .trending-img-card, .tranding-content-star', { delay: 300, origin: 'left', interval: 200 });
+ScrollReveal().reveal('.product-content h2, .t1, .trending-faq', { delay: 100, origin: 'left'});
+
+ScrollReveal().reveal('.faq-content, .footer-card-right, .product-card', { delay: 100, origin: 'right', interval: 200 });
+ScrollReveal().reveal('.head-nav, .viewAll, .t2, .tranding-title', { delay: 100, origin: 'right' });
+
+    </script>
     
     
   

@@ -42,8 +42,8 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
 
     <!-- ---scroll reveal js ---------------------------------->
-    <!-- <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -93,8 +93,8 @@
                 <i class="ri-star-fill"></i>
                 <span>5.0 (2,453)</span>
             </div>
-            <h1>Make your skin Glow Let us help you</h1>
-            <p>Revitalize your skin with our Luminous Glow Hydrating Cream.</p>
+            <h1 class="hero-h1">Make your skin Glow Let us help you</h1>
+            <p class="hero-h1">Revitalize your skin with our Luminous Glow Hydrating Cream.</p>
             <a href="product.html" class="btn product-btn">Check Products</a>
         </div>
 
@@ -539,7 +539,7 @@
             <a class="viewAll" href="product.html"> view all <i class="ri-arrow-right-line"></i></a>
         </div>
         <div class="trading-cotainer">
-            <div class="trading-card">
+            <div class="trading-card t1">
                 <a href="pricecart.html" >
                     <img src="https://framerusercontent.com/images/OTQ2EuVgEUHzVICwZYoQMylHOo0.jpg?scale-down-to=4096" alt="" >
 
@@ -554,7 +554,7 @@
                 </div>
                 <a href="pricecart.html" class="btn"> trading now</a>
             </div>
-            <div class="trading-card">
+            <div class="trading-card t2">
                <a href="pricecart.html">
                 <img src="https://framerusercontent.com/images/KJ25HCKwifFKo9V8TJSHXv2gY.jpg?scale-down-to=4096" alt="">
                </a>
@@ -1019,6 +1019,29 @@
 
 
     <script src="assest/jsFile/main.js"></script>
+     <script>
+        ScrollReveal({ 
+    reset: '',
+    distance: "60px",
+    duration: 2500,
+    delay:400 
+});
+ScrollReveal().reveal('.head-card, #logo,  ', { delay: 100, origin: 'top', interval: 200 });
+ScrollReveal().reveal('.btn_one', { delay: 300, origin: 'bottom', interval: 200 });
+ScrollReveal().reveal('.product-btn, .trending-imag-card-2', { delay: 500, origin: 'top' });
+
+ScrollReveal().reveal('.hero-h1', { delay: 100, origin: 'bottom', interval: 200 });
+// ScrollReveal().reveal('.review-information, .footer-card-left', { delay: 100, origin: 'bottom' });
+// ScrollReveal().reveal('.copywrites p, .copywrites a', { delay: 400, origin: 'bottom' });
+
+ScrollReveal().reveal('.hero-star', { delay: 300, origin: 'left', interval: 200 });
+ScrollReveal().reveal('.t1', { delay: 100, origin: 'left'});
+
+ScrollReveal().reveal('.product-card', { delay: 100, origin: 'right', interval: 200 });
+ScrollReveal().reveal('.head-nav, .viewAll, .t2', { delay: 100, origin: 'right' });
+
+    </script> 
+    
    
     
 </body>
