@@ -65,6 +65,9 @@ slider.addEventListener('wheel', (e) => {
 });
 
 
+  
+
+
 
 // ================faq control===============
 const faqContent = document.querySelectorAll(".faq-content");

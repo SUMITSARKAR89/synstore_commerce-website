@@ -786,13 +786,15 @@
     border: 1px solid #00000013;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     padding: 1px;
- }
+    transition: var(--transition-2);
+   }
  .product-card .product-card-content{
     position: relative;
     width: 100%;
     overflow: hidden;
     border-radius: 10px;
     border-radius: 10px 10px 0 0;
+    max-width: 100%;
    
  }
  .product-card:hover .product-img img{
@@ -806,6 +808,8 @@
     width: 100%;
     height: 300px;
     position: relative;
+    transform: scale(1);
+    overflow: hidden;
    
  }
  .product-img img{
@@ -1009,7 +1013,7 @@
    }
    .review-information{
       max-width: 100%;
-      width: 850px;
+      width: 800px;
       margin: 10% auto 0;
       color: var(--text-white);
    }
@@ -1022,7 +1026,7 @@
       text-align: center;
       color: var(--text-white2);
    }
-   .review-wrap {
+   /* .review-wrap {
       display: flex;
       
       align-items: center;
@@ -1114,7 +1118,61 @@
       font-style: italic;
       color: var(--text-white);
       
+    } */
+    .review-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+      overflow: hidden;
+      gap: 10px;
     }
+    
+    .nav-btn {
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+    }
+    
+    .review-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding: 20px;
+      margin-top: 5%;
+    }
+    
+    .review-slider::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .review-card {
+      flex: 0 0 auto;
+      width: 300px;
+      background: #222;
+      color: white;
+      border-radius: 15px;
+      padding: 20px;
+
+    }
+    .review-head {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .review-head img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .review-star {
+      margin: 10px 0;
+      color: gold;
+    }
+    
 
 /* ===============faq section===========  */
 #faq{

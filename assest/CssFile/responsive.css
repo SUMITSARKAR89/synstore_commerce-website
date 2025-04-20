@@ -160,9 +160,7 @@
     justify-content: center;
     
  }
- .nav-btn {
-    width: 150px;
- }
+ 
  .instagram-container .instagram-card{
     height: 200px;
  }
@@ -206,8 +204,6 @@
      #navBar .nav-logo{
         font-size: 18px;
      }
-     .nav-btn {
-        width: 200px;
-     }
+    
 
 }
