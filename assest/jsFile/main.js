@@ -124,23 +124,37 @@ trendFaq.forEach( faqs => {
 
 
 // ================form control===============
-const subcribeCard = document.querySelector("#subcribe-card");
-const sub = document.querySelector("#sub");
-const sub2 = document.querySelector("#sub2");
-const subClose = document.querySelector("#sub-close");
+// const subcribeCard = document.querySelector("#subcribe-card");
+// const sub = document.querySelector("#sub");
+// const sub2 = document.querySelector("#sub2");
+// const subClose = document.querySelector("#sub-close");
 
 
-sub.addEventListener("click", () => {
-    subcribeCard.style.display = "flex";
-});
-sub2.addEventListener("click", () => {
-    subcribeCard.style.display = "flex";
-});
-subClose.addEventListener("click", () => {
-    subcribeCard.style.display = "none";
+// sub.addEventListener("click", () => {
+//     subcribeCard.style.display = "flex";
+// });
+// sub2.addEventListener("click", () => {
+//     subcribeCard.style.display = "flex";
+// });
+// subClose.addEventListener("click", () => {
+//     subcribeCard.style.display = "none";
    
+// });
+const subscribeCard = document.querySelector("#subcribe-card");
+const openButtons = document.querySelectorAll("#sub, #sub2");
+const closeButton = document.querySelector("#sub-close");
+
+// Add event listeners to open buttons
+openButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    subscribeCard.style.display = "flex";
+  });
 });
 
+// Close button listener
+closeButton.addEventListener("click", () => {
+  subscribeCard.style.display = "none";
+});
 
 // ================================================modal control---------------
 
