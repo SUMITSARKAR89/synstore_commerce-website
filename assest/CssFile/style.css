@@ -97,6 +97,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        overflow-x: hidden;
 
     }
     li{
@@ -164,8 +165,9 @@
     body{
         max-width: 100%;
         width: 100%;
-        height: auto;
+        height: 100%;
         margin: 0 auto;
+        padding: 0;
         position: relative;
         font-family: "Roboto", sans-serif;
         
@@ -175,6 +177,7 @@
         transition:  all 0.5s ease-in-out;
         animation: zoom 0.5s ease-in-out;
         overflow-x: hidden;
+        overflow-y: scroll;
 
        
 
@@ -300,8 +303,9 @@
    flex-direction: column;
    justify-content: flex-start;
    align-items: flex-start;
-   height: 130vh;
+   height: auto;
    max-width: 100%;
+   overflow-x: hidden;
 
    margin-top: 10%;
    padding-bottom: 10%;
@@ -469,7 +473,8 @@
  }
  #hero{
     max-width: 100%;
-    width: 100%;
+    margin: 0 auto;
+   
     position: relative;
     background-image: url(/photos/bghero.png);
     background-position:center;
@@ -706,11 +711,18 @@
  #post,
  #newArrival,
  .review,
- .faq{
+ .faq,
+ .counter{
     max-width: 100%;
     margin: 0 auto;
     height: inherit;
 
+ }
+ .counter{
+  
+   padding: 0;
+   margin: 0;
+   height: 50vh;
  }
  .review{
    background: var(--bg-secondary-color);
@@ -997,7 +1009,7 @@
    }
    .review-information{
       max-width: 100%;
-      width: 700px;
+      width: 850px;
       margin: 10% auto 0;
       color: var(--text-white);
    }
@@ -1012,12 +1024,15 @@
    }
    .review-wrap {
       display: flex;
-      margin-top: 5%;
+      
       align-items: center;
       justify-content: center;
       position: relative;
       max-width: 100%;
+      margin: 5% 2%;
+     
       overflow: hidden;
+     
     }
 
     .nav-btn {
@@ -1026,6 +1041,8 @@
       cursor: pointer;
       z-index: 2;
       user-select: none;
+      max-width: 100%;
+      width: 100px;
       transition: opacity 0.3s ease;
     }
 
@@ -1040,7 +1057,8 @@
       scroll-behavior: smooth;
       gap: 20px;
       padding: 20px;
-      margin: 0 40px;
+      margin: 10px ;
+      cursor: grab;
     }
 
     .review-slider::-webkit-scrollbar {
@@ -1574,6 +1592,7 @@
    display: flex;
    justify-content: space-between;
    width: 100%;
+   height: 100%;
    gap: 30px;
    padding: 5%;
    align-items: flex-start;
@@ -1594,15 +1613,19 @@
  .modal-container .modal-image-card{
    max-width: 100%;
    width: 100%;
+   height: auto;
    display: flex;
    justify-content: flex-start;
    align-items: center;
    gap: 10px;
+   overflow-x: hidden;
  }
+ 
  .tranding-image-card .trending-img-card,
  .modal-image-card .modal-img-card{
    max-width: 100%;
    display: flex;
+   height: auto;
    flex-direction: column;
    width: 50%;
    gap: 10px;

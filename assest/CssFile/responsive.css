@@ -39,7 +39,11 @@
     .modal-image-card .modal-img-card{
 
         width: 60%;
+       
     }
+
+    
+    
     .trending-container .tranding-contents,
     .modal-container .modal-contents{
     width: 100%;
@@ -54,6 +58,7 @@
      .sub-group .sub-btn{
         width: 35%;
       }
+      
 }
 @media(max-width:1080px){
     :root{
@@ -81,6 +86,8 @@
         gap: 30px;
        
      }
+    
+    
      .trading-cotainer {
       
         grid-template-columns: 1fr;
@@ -91,6 +98,7 @@
     .modal-container .modal-image-card{
         width: 100%;
         flex-direction: column;
+       
     }
     .tranding-image-card .trending-img-card,
     .modal-image-card .modal-img-card{
@@ -109,15 +117,19 @@
     .marquee-container{
         padding: 10px 0;
     }
+    
     body{
         overflow-x: hidden;
     }
     .product-container,
-    .slideOne-container{  
+    .slideOne-container,
+    #counter .counter-container,
+    .counter .counter-container{  
         grid-template-columns:  1fr;
 
        
      }
+     
      #hero .head{
         display: none;
      }
@@ -129,6 +141,34 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
       }
+      .modal-body{
+        margin-top: 15%;
+      }
+      .modal-image-card .modal-img-card,
+      .tranding-image-card .trending-img-card{
+        flex-direction: column;
+      }
+      .hero-content .hero-star{
+        display: none;
+      }
+      #product .product-content,
+    #trading .product-content,
+    #hot-product .product-content,
+    #post .product-content,
+    #newArrival .product-content{
+    flex-direction: column;
+    justify-content: center;
+    
+ }
+ .nav-btn {
+    width: 150px;
+ }
+ .instagram-container .instagram-card{
+    height: 200px;
+ }
+
+   
+    
 
 }
 @media (max-width:500px){
@@ -136,5 +176,38 @@
         display: grid;
         grid-template-columns:  1fr;
       }
+      
+      .modal-body{
+        margin-top: 20%;
+        height: 150vh;
+      }
+      .footer-card-left .sub-group{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      .sub-group input:first-child{
+        width: 90%;
+       
+      }
+      .footer-card-right{
+        flex-direction: column;
+      }
+      .copywrites{
+        flex-direction: column;
+     }
+     #navBar{
+        padding: 5px 15px;
+        max-width: 90%;
+     }
+     #navBar .navBar-link{
+        gap: 5px;
+     }
+     #navBar .nav-logo{
+        font-size: 18px;
+     }
+     .nav-btn {
+        width: 200px;
+     }
 
 }
